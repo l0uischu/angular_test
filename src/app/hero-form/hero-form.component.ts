@@ -3,6 +3,7 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { HeroForm } from "../heroForm";
 import { Hero } from "../hero";
 import { HeroService } from "../hero.service";
+import { HEROES } from "../mock-heroes";
 @Component({
   selector: "app-hero-form",
   templateUrl: "./hero-form.component.html",
@@ -21,7 +22,7 @@ export class HeroFormComponent implements OnInit {
   }
 
   model = new HeroForm(
-    Math.floor(Math.random() * 90 + 10),
+    HEROES.length + 1,
     "Chan Tai Man",
     this.powers[0],
     "Tom"
