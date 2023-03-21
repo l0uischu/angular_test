@@ -1,18 +1,18 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 
-import { HeroForm } from '../heroForm';
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
+import { HeroForm } from "../heroForm";
+import { Hero } from "../hero";
+import { HeroService } from "../hero.service";
 @Component({
-  selector: 'app-hero-form',
-  templateUrl: './hero-form.component.html',
-  styleUrls: ['./hero-form.component.scss'],
+  selector: "app-hero-form",
+  templateUrl: "./hero-form.component.html",
+  styleUrls: ["./hero-form.component.scss"],
   encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class HeroFormComponent implements OnInit {
   localHeroList: Hero[] | undefined;
   constructor(private heroService: HeroService) {}
-  powers = ['Male', 'Female'];
+  powers = ["Male", "Female"];
 
   ngOnInit(): void {
     this.heroService
@@ -22,9 +22,9 @@ export class HeroFormComponent implements OnInit {
 
   model = new HeroForm(
     Math.floor(Math.random() * 90 + 10),
-    'Chan Tai Man',
+    "Chan Tai Man",
     this.powers[0],
-    'Tom'
+    "Tom"
   );
 
   onModelChange() {}
@@ -34,7 +34,7 @@ export class HeroFormComponent implements OnInit {
     this.submitted = true;
   }
   clicked(e: Event) {
-    e.preventDefault();
+    //e.preventDefault();
     console.log(e);
     this.localHeroList?.push({ id: this.model.id, name: this.model.name });
     //then do whatever you should do here
