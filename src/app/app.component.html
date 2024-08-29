@@ -1,8 +1,4 @@
-<h1>{{ title }}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Students</a>
-  <a routerLink="/form">Join Us</a>
-</nav>
-<router-outlet></router-outlet>
-<!-- <app-messages></app-messages> -->
+Total: <input [(ngModel)]="totalNumber" type="number" (ngModelChange)="onTotalNumberChange()" min="0"/> 
+<br/>= <br/>
+Row: <input [(ngModel)]="numberOfRow" type="number" (ngModelChange)="onNumberOfRowChange()" min="0"/><br/>
+Pill: <input [(ngModel)]="numberOfPill" type="number" (ngModelChange)="onNumberOfPillChange()" min="0"/>

@@ -19,37 +19,6 @@ export class DashboardComponent implements OnInit {
    // this.getHeroes();
   }
   
-  getTriangleNumber(row: number) {
-    return (row * (row + 1)) / 2
-  }
-
-  getNumberOfRow(totalCount: number) {
-    return (Math.sqrt(8 * totalCount + 1) - 1) / 2
-  }
-
-  setTotalNumber() {
-    this.totalNumber = this.getTriangleNumber(this.numberOfRow) + this.numberOfPill
-  }
-
-  onNumberOfPillChange() {
-    this.setTotalNumber();
-  }
-
-  onTotalNumberChange() {
-    this.numberOfRow = this.getNumberOfRow(this.totalNumber)
-    if (!Number.isInteger(this.numberOfRow)) {
-      this.numberOfRow = Math.floor(this.numberOfRow)
-      this.numberOfPill = this.totalNumber - this.getTriangleNumber(this.numberOfRow)
-      return
-    } else {
-      return
-    }
-  }
-
-  onNumberOfRowChange() {
-    this.setTotalNumber();
-  }
-
   getHeroes(): void {
     this.heroService
       .getHeroes()
