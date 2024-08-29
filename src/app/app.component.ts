@@ -33,6 +33,7 @@ export class AppComponent {
       this.numberOfPill = this.totalNumber - this.getTriangleNumber(this.numberOfRow)
       return
     } else {
+      this.numberOfPill = 0
       return
     }
   }
