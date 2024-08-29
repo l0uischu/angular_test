@@ -1,6 +1,4 @@
-<h2>Top Students</h2>
-<div class="heroes-menu">
-  <a *ngFor="let hero of heroes" routerLink="/detail/{{ hero.id }}">
-    {{ hero.name }}
-  </a>
-</div>
+Total: <input [(ngModel)]="totalNumber" type="number" (ngModelChange)="onTotalNumberChange()" min="0"/> 
+<br/>= <br/>
+Row: <input [(ngModel)]="numberOfRow" type="number" (ngModelChange)="onNumberOfRowChange()" min="0"/>
+Pill: <input [(ngModel)]="numberOfPill" type="number" (ngModelChange)="onNumberOfPillChange()" min="0"/>
