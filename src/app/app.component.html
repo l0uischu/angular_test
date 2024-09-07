@@ -1,4 +1,7 @@
-Total: <input [(ngModel)]="totalNumber" type="number" (ngModelChange)="onTotalNumberChange()" min="0"/> 
-<br/>= <br/>
-Row: <input [(ngModel)]="numberOfRow" type="number" (ngModelChange)="onNumberOfRowChange()" min="0"/><br/>
-Pill: <input [(ngModel)]="numberOfPill" type="number" (ngModelChange)="onNumberOfPillChange()" min="0"/>
+<div class="d-flex flex-column">
+    Total:<input class="form-control" [(ngModel)]="totalNumber" type="number" (ngModelChange)="onTotalNumberChange()" min="0"/> 
+    <i class="bi bi-arrow-down-up"></i>
+    Row:<input class="form-control" [(ngModel)]="numberOfRow" type="number" (ngModelChange)="onNumberOfRowChange()" min="0"/><br/>
+    Pill:<input class="form-control" [(ngModel)]="numberOfPill" type="number" (ngModelChange)="onNumberOfPillChange()" min="0"/>
+</div>
+
